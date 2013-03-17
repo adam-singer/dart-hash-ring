@@ -1,5 +1,5 @@
 name: hash_ring
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/JosephMoniz/dart-hash-ring
 description: >
   A consistent hashing implementation

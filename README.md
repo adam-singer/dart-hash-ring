@@ -34,10 +34,6 @@ part of hash_ring;
 
 class HashRing<V> {
 
-  Dictionary<int, V> _nodes;
-  Dictionary<V, int> _weights;
-  SortedSet<int> _ring;
-
   /**
    * Typical constructor
    */
@@ -76,27 +72,41 @@ class HashRing<V> {
    */
   Option<V> getNode(String criteria);
 
-  /**
-   * Helper method for generating all the hash ring positions
-   * for a given hash ring node
-   *
-   * @param {HashRingNode<V>} node - The node to get positions for
-   * @return {List<int>}           - The list of positions
-   */
-  List<int> _generatePositions(HashRingNode<V> node);
 }
 ```
 
 HashRingNode Interface:
 ```dart
-part of hash_ring;
-
 class HashRingNode<V> {
-  const HashRingNode(this._value, this._weight);
 
+  /**
+   * Initailizing constructor
+   *
+   * @param {V} _value    - The nodes value
+   * @param {int} _weight - The nodes weight
+   */
+  HashRingNode(this._value, this._weight);
+
+  /**
+   * Getter for the nodes value
+   *
+   * @return {V} - The nodes value
+   */
   V get value => this._value;
 
+  /**
+   * Getter for the nodes weight
+   *
+   * @return {int} - The nodes weight
+   */
   int get weight => this._weight;
+
+  /**
+   * Getter for the nodes positions
+   *
+   * @return {List<int>} - The list of positions
+   */
+  List<int> get positions => this._positions;
 
 }
 ```
