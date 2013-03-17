@@ -1,0 +1,14 @@
+name: hash_ring
+version: 0.1.0
+homepage: https://github.com/JosephMoniz/dart-hash-ring
+description: >
+  A consistent hashing implementation
+author: Joseph Moniz <joseph.moniz@gmail.com>
+dependencies:
+  option:     '>=0.2.0 <0.3.0'
+  sorted_set: '>=0.2.0 <0.3.0'
+  dictionary: '>=0.2.0 <0.3.0'
+  crc32:
+    git: git://github.com/JosephMoniz/CRC32.git
+  unittest: 0.4.1
+  meta: 0.4.1
